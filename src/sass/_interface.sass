@@ -15,3 +15,63 @@
   &:hover
     color: $stratos
     background-color: transparent
+
+.form
+  width: 750px
+  position: relative
+
+  &__email
+    width: 100%
+    padding: 25px 245px 25px 30px
+    background-color: transparent
+    border: 1px solid rgba(255, 255, 255, 0.5)
+    border-radius: 10px 11px 11px 10px
+    font-size: 22px
+    line-height: 32px
+    color: $white
+    outline: none
+
+    &::placeholder
+      color: $silver
+
+  &__submit
+    padding: 25px 50px
+    position: absolute
+    top: 0
+    right: 0
+    background-color: $blue-ribbon
+    border-radius: 0px 10px 10px 0px
+    font-size: 22px
+    line-height: 32px
+    color: $white
+    border: 1px solid $blue-ribbon
+    cursor: pointer
+    transition: filter .2s
+    &:hover
+      filter: brightness(85%)
+
+.companies
+
+  &__text
+    max-width: 530px
+    margin: 0 auto
+    margin-bottom: 25px
+    font-size: 16px
+    line-height: 19px
+    text-align: center
+    color: $mid-gray
+
+  &__inner
+    max-width: 955px
+    display: flex
+    align-items: center
+    @media (max-width: 980px)
+      justify-content: center
+      flex-wrap: wrap
+
+  &__company
+    margin-right: 50px
+    &:last-child
+      margin-right: 0
+    @media (max-width: 980px)
+      margin-bottom: 10px
