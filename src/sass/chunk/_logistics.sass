@@ -1,0 +1,90 @@
+.logistics
+  padding-top: 100px
+  padding-bottom: 75px
+
+  &__container
+    margin: 0 auto
+    padding: 0 15px
+    max-width: 925px
+
+  &__wrap
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  &__title
+    margin: 0
+    margin-bottom: 30px
+    font-family: 'Alata', sans-serif
+    font-weight: 400
+    font-size: 42px
+    line-height: 58px
+    text-align: center
+    color: $stratos
+
+    @media ( max-width: 960px )
+      font-size: 32px
+      line-height: 38px
+      margin-bottom: 20px
+
+    @media ( max-width: 640px )
+      font-size: 22px
+      line-height: 28px
+      margin-bottom: 10px
+
+  &__text
+    max-width: 780px
+    margin: 0
+    margin-bottom: 50px
+    font-size: 20px
+    line-height: 32px
+    text-align: center
+    color: $mid-gray
+
+    @media ( max-width: 960px )
+      margin-bottom: 30px
+      font-size: 15px
+      line-height: 22px
+
+    @media ( max-width: 640px )
+      margin-bottom: 20px
+      font-size: 13px
+      line-height: 20px
+
+  &__link
+    display: flex
+    align-items: center
+    padding: 10px 25px
+    text-decoration: none
+    background-color: rgba(15, 82, 226, 0.1)
+    border-radius: 30px
+
+    @media ( max-width: 640px )
+
+  &__image
+    margin-right: 15px
+    display: inline-block
+    width: 24px
+    height: auto
+    border-radius: 50%
+
+  &__descr
+    font-size: 15px
+    line-height: 32px
+    text-align: center
+    color: $blue-ribbon
+    position: relative
+
+    &::after
+      content: ""
+      position: absolute
+      width: 0
+      border-top: 2px solid $blue-ribbon
+      top: 75%
+      left: 50%
+      transform: translate(-50%)
+      transition: width .3s
+
+    &:hover
+      &::after
+        width: 100%
