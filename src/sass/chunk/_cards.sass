@@ -1,0 +1,145 @@
+.cards
+  padding-top: 75px
+  padding-bottom: 125px
+
+  &__wrap
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+
+  &__card
+    margin-bottom: 255px
+    width: 1145px
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    &:last-child
+      margin-bottom: 0
+
+  &__content
+    max-width: 515px
+
+  &__title
+    padding-left: 10px
+    margin: 0
+    margin-bottom: 20px
+    font-family: 'Alata', sans-serif
+    font-weight: 400
+    font-size: 72px
+    line-height: 99px
+    color: $stratos
+
+  &__text
+    margin: 0
+    margin-bottom: 40px
+    font-size: 20px
+    line-height: 32px
+    color: $mid-gray
+
+  &__link
+    text-decoration: none
+    font-family: 'Inter-Medium', sans-serif
+    font-weight: 500
+    font-size: 18px
+    line-height: 22px
+    color: $black
+    position: relative
+
+    &::after
+      content: ""
+      position: absolute
+      width: 0
+      border-top: 2px solid $blue-ribbon
+      top: 102%
+      left: 50%
+      transform: translateX(-50%)
+      transition: width .3s
+
+    &:hover
+      &::after
+        width: 100%
+
+  &__inner
+    position: relative
+    display: flex
+
+  &__image
+    width: 455px
+    height: auto
+    filter: drop-shadow(-20px 20px 60px rgba(121, 164, 255, 0.3))
+    border-radius: 10px
+
+  &__decoration-right
+    width: 235px
+    height: auto
+    position: absolute
+    top: 0
+    right: -20px
+    z-index: -1
+    border-radius: 10px
+    opacity: 65%
+
+  &__decoration-top-right
+    width: 134px
+    height: auto
+    position: absolute
+    top: 32px
+    right: -55px
+    z-index: -2
+    border-radius: 50%
+
+  &__decoration-bottom-right
+    width: 188px
+    height: auto
+    position: absolute
+    bottom: -68px
+    right: -110px
+    z-index: -2
+
+  &__decoration-bottom-left
+    width: 150px
+    height: auto
+    position: absolute
+    left: -53px
+    bottom: -60px
+    z-index: -1
+
+  &__decoration-left
+    width: 235px
+    height: auto
+    position: absolute
+    top: 0
+    left: -20px
+    z-index: -1
+    border-radius: 10px
+    opacity: 65%
+
+  &__decoration-top-left
+    width: 134px
+    height: auto
+    position: absolute
+    top: 32px
+    left: -55px
+    z-index: -2
+    border-radius: 50%
+
+  &__card--left
+    margin-right: 140px
+
+    &__decoration-bottom-left
+      width: 188px
+      height: auto
+      position: absolute
+      bottom: -68px
+      left: -110px
+      z-index: -2
+      transform: scale(-1, 1)
+
+    &__decoration-bottom-right
+      width: 150px
+      height: auto
+      position: absolute
+      right: -53px
+      bottom: -60px
+      z-index: -1

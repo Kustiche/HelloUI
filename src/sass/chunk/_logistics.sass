@@ -5,7 +5,19 @@
   &__container
     margin: 0 auto
     padding: 0 15px
-    max-width: 925px
+    max-width: 1350px
+    position: relative
+
+    &::after
+      content: ""
+      position: absolute
+      width: 100%
+      top: -100px
+      left: 50%
+      border: 1px solid rgba(0, 0, 0, 0.1)
+      transform: translateX(-50%)
+      @media (max-width: 1380px)
+        width: 90%
 
   &__wrap
     display: flex
@@ -13,6 +25,7 @@
     align-items: center
 
   &__title
+    max-width: 895px
     margin: 0
     margin-bottom: 30px
     font-family: 'Alata', sans-serif
@@ -51,15 +64,20 @@
       font-size: 13px
       line-height: 20px
 
-  &__link
-    display: flex
-    align-items: center
-    padding: 10px 25px
-    text-decoration: none
-    background-color: rgba(15, 82, 226, 0.1)
-    border-radius: 30px
+.logistics-link
+  display: flex
+  align-items: center
+  padding: 10px 25px
+  text-decoration: none
+  background-color: rgba(15, 82, 226, 0.1)
+  border-radius: 30px
+  transition: all .3s
+  @media ( max-width: 640px )
 
-    @media ( max-width: 640px )
+  &:hover
+    background-color: rgba(15, 82, 226, 0.25)
+    .logistics-link__text
+      color: $gulf-blue
 
   &__image
     margin-right: 15px
@@ -68,23 +86,9 @@
     height: auto
     border-radius: 50%
 
-  &__descr
+  &__text
     font-size: 15px
     line-height: 32px
+    text-transform: capitalize
     text-align: center
     color: $blue-ribbon
-    position: relative
-
-    &::after
-      content: ""
-      position: absolute
-      width: 0
-      border-top: 2px solid $blue-ribbon
-      top: 75%
-      left: 50%
-      transform: translate(-50%)
-      transition: width .3s
-
-    &:hover
-      &::after
-        width: 100%
